@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import Swiper from 'swiper';
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
@@ -79,5 +80,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: ['swiper']
   }
 }

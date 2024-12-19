@@ -2026,3 +2026,33 @@
 <style scoped>
 
 </style>
+
+
+<script>
+import Swiper from 'swiper';
+import 'swiper/swiper-bundle.min.css';
+
+export default {
+  data() {
+    return {
+      swiper: null,
+      items: [
+        { /* Данные для карточек */ },
+        { /* Данные для карточек */ },
+        { /* Данные для карточек */ },
+      ],
+    };
+  },
+  mounted() {
+    this.swiper = new Swiper('.swiper', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.slider-next',
+        prevEl: '.slider-prev',
+      },
+    });
+  },
+};
+</script>

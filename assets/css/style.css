@@ -12978,11 +12978,6 @@ input[type=number], input[type=number]:focus, input[type=number]:hover {
     display: flex
 }
 
-.actives {
-    color: green;
-    background-color: #d2f4d2;
-}
-
 .plus-minus {
     position: relative;
     width: 20px;
