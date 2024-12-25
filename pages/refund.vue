@@ -1,3 +1,7 @@
+<script setup>
+
+</script>
+
 <template>
   <main>
 
@@ -6,7 +10,7 @@
       <section class="delivery__head">
         <div class="delivery-head">
           <div class="container">
-            <h1 class="about-company-head__title">О компании</h1>
+            <h1 class="about-company-head__title">Возврат</h1>
           </div>
         </div>
       </section>
@@ -54,6 +58,6 @@
   </main>
 </template>
 
-<style>
+<style scoped>
 
 </style>

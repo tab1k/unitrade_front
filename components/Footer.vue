@@ -6,32 +6,38 @@
   <footer class="footer" itemscope="" itemtype="https://schema.org/WPFooter">
     <div class="container">
       <div class="footer__top">
-        <div class="row">
-          <div class="col-lg-auto col-sm-6">
-
-                    <span class="footer__logo logo">
-                            <img style="height: 50px; width: 50px;" src="images/logo.png" alt="Стальфед">
-                        </span>
-
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-auto col-sm-6 d-flex align-items-center">
+      <span class="footer__logo logo">
+        <img style="height: 50px; width: 50px;" src="images/logo.png" alt="Стальфед">
+      </span>
           </div>
-          <div class="footer__top_subscribe d-flex justify-content-end col-md col-sm-6">
-            <div class="footer__top_subscribe_text">
-              <div class="footer__menu-link">Подписка на рассылку</div>
-              <div class="footer__menu-item_title-link">Регулярные спецпредложения и скидки</div>
+          <div class="footer__top_subscribe d-flex justify-content-end col-lg col-sm-6">
+            <div class="col-lg-6 col-md-6">
+              <ul class="social d-flex justify-content-end">
+
+                <li class="social__item">
+                  <a class="social__link" href="https://t.me/isteelskz_bot" target="_blank">
+                    <svg class="icon icon_telegram">
+                      <use xlink:href="images/sprite.svg#telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="social__item">
+                  <a class="social__link" href="https://wa.me/77005330150" target="_blank">
+                    <svg class="icon icon_whatsapp">
+                      <use xlink:href="images/sprite.svg#whatsapp"></use>
+                    </svg>
+                  </a>
+                </li>
+
+              </ul>
             </div>
-            <form class="need-validate footer__top_subscribe_input" id="subscribe_footer" method="post"
-                  data-need-notification="true" data-action="/informer/form_send/subscribe_footer/">
-              <input class="input__input" type="email" name="email" placeholder="Электронная почта"
-                     required="">
-              <button class="subscription_footer" type="submit">
-                <svg class="icon icon_arrow-right">
-                  <use xlink:href="images/sprite.svg#arrow-right"></use>
-                </svg>
-              </button>
-            </form>
           </div>
         </div>
       </div>
+
       <div class="footer__middle">
         <div class="row" itemscope="" itemtype="https://schema.org/Organization">
           <meta itemprop="name" content="ООО ГК «Стальная федерация»">
@@ -149,27 +155,6 @@
               </a>
             </div>
           </div>
-          <div class="col-lg-6 col-md-6">
-            <ul class="social">
-
-              <li class="social__item">
-                <a class="social__link" href="https://t.me/isteelskz_bot" target="_blank">
-                  <svg class=" icon icon_telegram">
-                    <use xlink:href="images/sprite.svg#telegram"></use>
-                  </svg>
-                </a>
-              </li>
-
-              <li class="social__item">
-                <a class="social__link" href="https://wa.me/77005330150" target="_blank">
-                  <svg class=" icon icon_whatsapp">
-                    <use xlink:href="images/sprite.svg#whatsapp"></use>
-                  </svg>
-                </a>
-              </li>
-
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -177,5 +162,54 @@
 </template>
 
 <style scoped>
+.footer__top {
+  display: flex;
+  align-items: center; /* Выравнивание по вертикали */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap; /* Обеспечивает адаптацию для мобильных устройств */
+  align-items: center;
+}
+
+.footer__logo {
+  margin-right: auto; /* Логотип выравнивается влево */
+}
+
+.social {
+  display: flex;
+  justify-content: flex-end; /* Иконки справа */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social__item {
+  margin-left: 10px; /* Расстояние между иконками */
+}
+
+.social__link svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+@media (max-width: 576px) {
+  .footer__top {
+    flex-direction: column; /* Разделяем элементы на две строки */
+  }
+
+  .footer__logo {
+    margin-bottom: 10px; /* Добавляем отступ для логотипа */
+  }
+
+  .social {
+    justify-content: center; /* Центрируем иконки на мобильных устройствах */
+  }
+  .footer__top_subscribe d-flex justify-content-end col-lg col-sm-6 {
+    display: none;
+  }
+}
 
 </style>
